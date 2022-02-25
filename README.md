@@ -3,7 +3,7 @@
 This project build a Docker container from scratch.  
 It pushes the image to Amazon Elastic Container Registry(ECR) and Docker Hub. 
 
-Deploys it to Amazon Elastic Container Container Service(ECS).  
+Deploy it to Amazon Elastic Container Container Service(ECS).  
 
 ## Reference
 
