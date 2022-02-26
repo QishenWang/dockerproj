@@ -2,7 +2,8 @@
 
 This project build a Docker container from scratch.  
 It pushes the image to Amazon Elastic Container Registry(ECR) and Docker Hub. 
-It can run in kubernetes.
+
+It can also run in kubernetes.
 
 Deploy it to Amazon Elastic Container Container Service(ECS).  
 
