@@ -2,10 +2,9 @@
 
 This project build a Docker container from scratch.  
 It pushes the image to Amazon Elastic Container Registry(ECR) and Docker Hub. 
+Deploy it to Amazon Elastic Container Container Service(ECS). 
 
-It can also run in kubernetes.
-
-Deploy it to Amazon Elastic Container Container Service(ECS).  
+It can also run in Kubernetes.
 
 ## Reference
 
@@ -110,4 +109,26 @@ Open ECS and "get started".
 
 And you can see the service is running and access the public IP.
 
-### 
+### Kubernetes deployment
+
+```
+kubectl apply -f api.yaml
+```
+
+If working locally, e.g. using `minikube`, use port forwarding to expose the service:
+
+```
+kubectl port-forward service/dockerproj-svc 8080
+```
+
+To scale the deployment, apply a HorizontalPodAutoscaler. Either:
+
+```
+kubectl apply -f autoscale.yaml
+```
+
+or:
+
+```
+kubectl autoscale deployment dockerproj --cpu-percent=50 --min=1 --max=10
+```
